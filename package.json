@@ -1,5 +1,5 @@
 {
-  "name": "logdna-bunyan",
+  "name": "@ips.su/logdna-bunyan",
   "version": "1.3.2",
   "description": "LogDNA's Node.js logging module with support for Bunyan",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/logdna/logdna-bunyan.git"
+    "url": "git+git@github.com:SirenaTravel/logdna-bunyan.git"
   },
   "keywords": [
     "logdna",
@@ -26,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/logdna/logdna-bunyan/issues"
+    "url": "https://github.com/SirenaTravel/logdna-bunyan/issues"
   },
-  "homepage": "https://github.com/logdna/logdna-bunyan#readme",
+  "homepage": "https://github.com/SirenaTravel/logdna-bunyan#readme",
   "dependencies": {
     "logdna": "^3.5.0"
   },

@@ -27,10 +27,6 @@ class BunyanStream extends EventEmitter {
     }
 
     write(record) {
-
-        // LogDNA adds their own - lets assume the time delta is trivial
-        // record['timestamp'] = record.time;
-
         var message = record.msg;
 
         var opts = {
@@ -39,12 +35,16 @@ class BunyanStream extends EventEmitter {
             , context: Object.assign({}, record)
             , index_meta: true
             , hostname: record.hostname
+            , timestamp: record.time
         };
         // remove duplicate fields
         delete opts.context.level;
         delete opts.context.timestamp;
         delete opts.context.name;
-        delete opts.context.msg;
+        delete opts.context.hostname;
+        delete opts.context.time;
+        delete opts.context.v;
+        delete opts.context.pid;
 
         try {
             this.logger.log(message, opts);
