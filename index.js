@@ -39,8 +39,8 @@ class BunyanStream extends EventEmitter {
         };
         // remove duplicate fields
         delete opts.context.level;
-        delete opts.context.timestamp;
         delete opts.context.name;
+        delete opts.context.msg;
         delete opts.context.hostname;
         delete opts.context.time;
         delete opts.context.v;
